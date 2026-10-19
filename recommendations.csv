@@ -1,0 +1,8 @@
+priority,recommendation,evidence,action,success_measure
+1,Avoid live-SOC interpretations,CICIDS2017 is a historical research benchmark.,Label every artifact as retrospective; do not claim current threats.,No production claims.
+2,Treat random-split scores as a baseline,Rows were randomly stratified after subsampling; related flows may span train/test.,Run cross-day or group-held-out follow-up where feasible.,Publish temporal/group evaluation.
+3,Review missed attacks,Held-out false negatives: 4; recall 99.8%.,Inspect top missed attack labels in category_detection_performance.csv.,Track missed counts and recall by label.
+4,Control false alerts,Held-out false positives: 0; FPR 0.0%.,Review benign false flags before operational escalation plans.,Track false-positive rate alongside recall.
+5,Validate ingestion and schema,"1 source CSVs selected; 15,603 sampled rows.","Track file coverage, schema, missingness, infinity and row filtering.",Reconcile sampled and SQL totals.
+6,Make class imbalance visible,"Observed BENIGN records: 6,782; attack records: 8,821.",Preserve per-label and per-file distributions; avoid blanket prevalence claims.,Publish category supports.
+7,Require contemporary authorized validation,Historical academic flows do not establish deployed accuracy.,"Test under privacy-approved, modern, distinct traffic conditions.",No deployment decision based on this notebook alone.
